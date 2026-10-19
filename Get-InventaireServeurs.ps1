@@ -13,8 +13,10 @@ $ExportHTML  = "C:\Temp\Inventaire_Serveurs_$(Get-Date -Format 'yyyyMMdd_HHmmss'
 
 # --- Liste des serveurs (dédoublonnée) ---
 $Serveurs = @(
-    "nom de serveur" ou import cvs 
-)
+    "SRV-FILE01",
+    "SRV-DC01",
+    "SRV-WEB01"
+) | Select-Object -Unique
 
 Write-Host "`n============================================================" -ForegroundColor Cyan
 Write-Host "   INVENTAIRE SERVEURS - $(Get-Date -Format 'dd/MM/yyyy HH:mm')" -ForegroundColor Cyan
